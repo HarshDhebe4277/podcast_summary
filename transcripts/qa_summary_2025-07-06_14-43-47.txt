@@ -1,0 +1,226 @@
+--- Chunk 1 ---
+Q: What are your thoughts on the current state of AI coding tools?
+A: AI coding tools are pretty awesome but have limits.  While they can increase productivity (1.5-2x), they can't do the entire job.  They struggle with context in large codebases, and the generated code quality isn't always great.  AI is heavily marketed as a solution to every problem, but that's not reality.  It's limited by context size and learning capacity; it can't design entirely novel features.
+
+Q: What are some areas where you don't think AI can be readily applied to your code base, where you wouldn't trust AI to do a good job?
+A: In a large codebase, mindlessly using AI to write code is risky.  AI tools might touch parts of the codebase you don't want altered.  Context size is a major limitation in LLMs, especially with large codebases. Token limits and costs are also a concern; relying solely on AI could lead to interruptions mid-day due to token expiration.  Novel codebases present challenges because LLMs can only retain so much information.  The effectiveness also depends on the language's popularity; AI performs better with frequently used languages like JavaScript and Python than less common ones like Ruby on Rails.
+
+Q: Would the ubiquity of code examples and the likelihood of an AI being able to help you create future features factor into your decision of choosing a tech stack for a new project?
+A: No, the AI's ability to assist wouldn't be the primary factor in choosing a tech stack.  The most important considerations are: Does it serve the purpose? Will I be happy with it?  Most importantly, will it be easy to hire developers with experience in that tech stack?
+
+Q: Do you think there's going to be a gradual thinning of the ranks of serious frameworks used to build mobile apps or websites as more people consider the training data and quality of AI agents?
+A:  It's an interesting perspective but unlikely to happen in the next 4-5 years.  The trust that a developer can learn a new tech stack within a given time frame is higher than the trust in an LLM's ability to handle a large context window. Humans can learn and deliver reliable results faster than AI, and the cost of tokens is also a factor.
+
+Q: How far do you think some of these AI tools are from being sufficiently mature that they can be widely adopted and trusted within a large bespoke code base?
+A: Very far, especially with a large context window and millions of lines of code.  The speaker wouldn't trust an AI agent to touch the entire codebase without supervision.  Their LMS, for example, has a massive and complex codebase built over 10 years using multiple technologies and frameworks, making it unsuitable for complete AI management.
+
+
+--- Chunk 2 ---
+Q: What is the problem with auto-running coding tools?
+A: The problem with these auto-running tools is that they try to solve the problem you give them without worrying about breaking another part of the codebase.  They're focused on solving the problem no matter what part of the code they have to touch.  For example, a small application might switch from FastAPI to Flask just to make the code work.  Imagine the problem escalating to larger projects and needing to change the entire framework.
+
+Q: What is your opinion on using AI for writing production-level code?
+A: I'm somewhat of a coding AI skeptic. I don't fully trust it to write production-caliber code that won't introduce many bugs and annoy other developers. However, I understand its use for personal tools or projects where it's not a big deal if it introduces bugs.
+
+Q: How does AI change coding style?
+A: Every developer develops a coding style, but LLMs don't have a consistent style. They acquire styles from thousands of developers, which can be a problem.  Small things like preferring long if/else statements versus ternary operators matter, and LLMs may not adhere to a consistent style.  An example given is that an AI generated code that violated the principle of dependency injection while the speaker was teaching that very principle.
+
+Q: Can you give an example of a feature where you would use AI?
+A: Writing user stories. When a client gives a vague idea of features, AI can help define the specific user stories needed for development.  It can break down a feature request into granular tasks ("As a user, I need to be able to...").  This helps solve the problem of getting enough requirements from clients, which is a common developer complaint.
+
+Q: What other applications of AI do you use?
+A: We use AI to generate YouTube descriptions and timestamps for videos.  We feed it a video, it transcribes it, and then generates a description and titles for the timestamps.  This is also used for extracting titles from screenshots of video timestamps.
+
+Q: Are there any real code-based applications of AI you use besides tab completion?
+A: No, not currently.  All code is reviewed and checked by a human.
+
+Q: What advice would you give to developers regarding AI in coding?
+A: Don't be scared of AI; use it to your advantage.  It can significantly increase your productivity, allowing you to complete projects faster.  Learn to code, and use AI as a companion to deliver products more efficiently.  There will always be a human in the loop for quality control.
+
+
+--- Chunk 3 ---
+Q: What led you to teaching, and how long have you been doing it?
+A: The speaker initially taught physics for a short time but found coding more engaging.  They started teaching coding for free due to past hardships, aiming to make education accessible. They've been actively teaching for free for 13+ years across various platforms, alongside paid courses for financial reasons.
+
+Q:  Can you describe your company that helps other educators?
+A:  The speaker built companies focused on education. One side teaches, and the other (Learners) helps other educators teach, including those in farming, chartered accountancy, and coding.  Their LMS (Learning Management System) is open-source and allows others to host video courses, although it's not primarily designed for users to fully customize it.  They offer the tools to many for free.
+
+Q: Can you describe your early life, including your high school experience and university application process in India?
+A: The speaker grew up in Jaipur. After their 12th exam, they scored around 5,000 in the AI Tripathy exam (equivalent to the IIT exam).  They received a free year of college in Jaipur with a conditional second year.  They chose electronics and communications but switched to software due to hardware limitations and cost.
+
+Q: When did you start learning Pearl, and how did that compare to Python's popularity at the time?
+A: The speaker doesn't recall the exact year but remembers Pearl was more popular than Python when they first learned it.  They had to order a book to learn Python as YouTube did not exist at the time.
+
+Q: Can you describe your work in cybersecurity and how you incorporated teaching into it?
+A: After college, they worked for a large Indian company doing penetration testing. They proposed teaching penetration testing at universities on weekends, which the company allowed as a business venture.  For two to three years, they taught at various IITs and NITs, often working 60-70 hours a week including travel.
+
+Q: What were the benefits of this intensive teaching schedule?
+A: The intensive teaching schedule improved their ability to teach for long hours and enhanced their communication skills, allowing them to connect with diverse audiences across India and internationally.
+
+Q: How many countries have you visited, and how does that relate to your teaching?
+A: The speaker has visited 43 countries and plans to visit 45, emphasizing the importance of cross-cultural communication in teaching, noting that effective communication is crucial for transmitting information and making it relatable.
+
+
+--- Chunk 4 ---
+Q: What opened your mind to the field of teaching?
+A: Learning how to teach; realizing there's extensive research and pedagogy to learn about, like the books "Geek Pedagogy" and "How the Best Teachers Do...".
+
+Q: What are the key skills needed for effective teaching?
+A: Domain expertise in the subject matter, effective communication, empathy, and instructional design skills (creating learning artifacts).
+
+Q: What's the most important skill to master early in one's career?
+A: Communication skills, particularly English language proficiency to connect with a wider audience.
+
+Q: Why did you choose iOS development initially?
+A: The appeal of building apps used by many people.
+
+Q: How did you get your first job in iOS development?
+A: By offering to work long hours (16 hours instead of 8) despite lacking extensive experience.
+
+Q: What challenges did you face when selling your courses online initially?
+A: The lack of widespread credit card and payment gateway systems in India, especially the absence of support for UPI (Unified Payments Interface) and OTP (One-Time Password) systems by platforms like PayPal and Stripe.
+
+Q: What happened to your company, Learn Code Online?
+A: It was acquired for approximately $1-1.2 million in a stock deal, and the acquiring company was later acquired by PW (a unicorn in India) for around $30 million.
+
+Q: What's your current focus, and how do you manage your time?
+A: Primarily teaching (80% of time), with 20% dedicated to maintaining the LMS company and developing new features based on teacher feedback.
+
+Q: What's your opinion on the overuse of AI in teaching solutions?
+A: AI is often seen as a magic solution, but simpler, proven tools might be more effective for many situations.  Many existing tools are often better solutions than immediately jumping to AI.
+
+Q: How long have you been working on the Learners LMS project?
+A: 11 years.
+
+Q: Why is computer science so popular in India?
+A: The low risk and cost associated with experimenting and learning through coding, allowing for easier iterative development.  This is in contrast to the physical and financial constraints of working with physical electronics.
+
+
+--- Chunk 5 ---
+Q: Does the ease of deployment (internet, app stores) partially explain computer science's dominance as a major in India?
+A: Yes, because many people in India are not financially stable, and computer science offers a quick path to financial stability.  Many companies in India are software-based, outsourcing to US and Australian clients, creating high demand for engineers.
+
+Q: What's a concern regarding computer science students in India?
+A: A significant number of students enter computer science, study for a short time, and then switch to different roles (design, product management), spending very little time actually writing code.
+
+Q: What advice is given regarding the importance of college reputation in computer science?
+A: The value of a college education in computer science is not as significant as it once was due to readily available online resources.  The internet provides access to great teachers and learning materials.
+
+Q: What is the speaker's bias, and how should it be interpreted?
+A: The speaker is biased towards coding and encourages everyone to learn it, but advises taking this advice with a grain of salt, as there are other paths to financial success.
+
+Q: How does the Indian ecosystem further support computer science students?
+A: India's large scale and numerous startups, many funded by venture capital, provide ample opportunities.  Free or subsidized tools (development frameworks, hosting services) further reduce barriers to entry.  Students can build products for local businesses and charge for their services.
+
+Q: What advice is given to a university student who didn't get into a top computer science program?
+A: Find your peers – equally passionate and hardworking individuals – through online communities (Twitter, Discord, YouTube comments) to build a supportive learning environment. The internet provides access to the same knowledge as top universities; the missing element is the peer group and experience.  Building your own ambitious product is also encouraged.
+
+
+--- Chunk 6 ---
+Q: What is the best approach to building a portfolio as a software developer?
+A: Don't build many projects; build one excellent project and keep it alive for years, aiming for real users and turning it into a product.  Initially, you might need two or three smaller tutorial projects to learn the basics before tackling your main project.
+
+Q: What's your opinion on higher education, particularly Masters programs, and their current value?
+A: While not anti-graduate school, the speaker finds the current value of Masters degrees significantly lower than 10 years ago.  This is due to underpaid and unmotivated teachers who don't update their knowledge, leading to poor teaching quality and a lack of value addition for students.  The speaker also notes that many companies no longer hire Masters students for campus placements, preferring recent bachelor's degree graduates.  The speaker admits to learning a lot from the curriculum and books independently, despite the teachers' lack of expertise.
+
+Q: What surprised you about how higher education works in India?
+A: The speaker found it surprising how little value they got from their master's program compared to what it offered years ago, due to underpaid and unmotivated teachers and a shift in company hiring practices.  The speaker also points out the disparity in admission rates between undergraduate and graduate programs in prestigious universities, suggesting graduate programs are easier to get into but are often more expensive and function as a "cash cow" for universities.  This situation isn't unique to India; the speaker observed similar issues in other countries.
+
+
+--- Chunk 7 ---
+Q: Why is the value of education decreasing in India?
+A: In the past, educational institutions funded projects based on merit. Now, they've become incubation hubs, prioritizing startups.  This means students can access these hubs regardless of their institution, making the traditional route less appealing as the goal is peer network access.  Additionally, prestigious institutions like IITs are partnering with tech companies, allowing students to obtain degrees without ever attending the campus or interacting with their peer group.  This dilutes the brand's prestige and allows for less qualified individuals to obtain degrees through financial means, rather than merit.
+
+
+Q: How are prestigious universities in India and the US diluting their brand equity?
+A: Prestigious universities in India are partnering with companies, allowing students to obtain degrees without attending classes or interacting with the campus community. In the US, companies like Trilogy paid universities to operate coding boot camps on their campuses, misleading students about the program's true affiliation.  These actions dilute brand equity and long-term value.
+
+
+Q: What is the long-term impact of this diluted brand equity?
+A:  In ten years, it will be difficult to distinguish between students who earned their degrees through merit and those who paid for them.  This will create a dual system requiring clarification of admission methods. Employers will need to develop ways to filter applicants, potentially using machine learning, to identify those who genuinely earned their degrees.
+
+
+Q: What is the justification given by companies collaborating with universities?
+A: Companies argue that universities have outdated curricula and poorly trained teachers. Their collaboration offers students real-world knowledge and intensive training in areas like machine learning and data science, supplementing their degree with practical skills.
+
+
+Q: Why isn't this problem solved by the creation of new universities?
+A:  Creating new universities is a lengthy bureaucratic process, making partnerships with existing institutions a more practical and efficient solution.  Students benefit from a degree and supplemental real-world training. Universities might also justify these partnerships by offering educational opportunities to those who wouldn't otherwise have access.
+
+
+Q: What is the speaker's perspective on these partnerships?
+A: The speaker finds these partnerships to be "brazenly cash-grabbing," believing universities are prioritizing profit over academic integrity and brand reputation. However, the speaker also attempts to understand the perspectives of all involved parties, recognizing that each group has its own justification.
+
+
+Q: How does the speaker's tutoring experience relate to the discussion?
+A: The speaker has been approached by IIT students who, despite attending prestigious universities, recognize the limitations of their education and seek supplemental instruction. The speaker has declined offers to conduct paid seminars, highlighting a contrast between their approach and the universities' partnerships with companies.
+
+
+--- Chunk 8 ---
+Q: Is it accurate that you were convinced to teach a cohort of students directly?
+A: Yeah, it actually happened. So these were just like five or six students, probably six or seven, something like that. They asked me that hey, we want to learn the subject and we want to pay you and I said, money's not the problem that has never been.
+
+Q: How did the students convince you to teach them?
+A: They just convinced me that instead of teaching us with the regular route, can you teach us like seven to eight hours? We'll be sitting with you live. And can we just finish this topic in just four days, five days instead of taking a month long of it and you just go through it and give us one day break. You teach one day, give us a break. We'll sit that.
+
+Q: What did the students do to learn together?
+A: What they did is they went into a single hostel room...They all decided that we'll go up into single room and we will just have this crazy one week hackathon of learning. We will hire the best mentors.
+
+Q: How much did each student pay you?
+A: Each student will pay you one lakh rupees or something. So we are actually focused on that. I said, okay, you go ahead and do that. So five lakh is not really a big money for me. It's very, very okay. It's for me. But for a one student paying this much of amount of money, it's pretty huge. Yeah, this is equivalent to like one thousand U.S. dollars.
+
+Q: What is the equivalent cost of this in the US context of private tutoring?
+A: If you were to get like a private tutor and they were really good in the United States, you might pay like a hundred dollars an hour. So like 10 hours, that would be like a lack essentially a private instruction. Now, if it's a smaller group, maybe people do like a group class and they pay like $50 per student per hour or something like that.
+
+Q:  How did you structure the teaching sessions with the students?
+A: They said, you teach us one day for six to eight hours, then give us the next day as a break. We will self-study in the group in the hostel. Then again, next day you come up with that. I said, I've never done this kind of thing. Let's experiment it. How does it go?
+
+Q: What was your impression of the students' progress?
+A: I was so impressed by their progress because they were constantly in a group. Everybody was teaching each other. I realized, oh man, this is so good. And by the end of the like seven days or eight days, they were able to learn so much. I was so impressed.
+
+Q: What project did you give them after the intensive learning?
+A: I gave them a hackathon, online hackathon. Now all of you five or six of you have to build this. And they were able to build that complex thing within like three or four days. I gave them a week, but they were able to deliver that in three or four days.
+
+Q: What did you do with the money they paid you?
+A: All the prize money that was that they paid me. I gave that back as a prize money. It's your special reward for this. So I said, if you give this, I'll give each one of you a MacBook. So as well.
+
+Q: Why did you do this intensive teaching program?
+A: I didn't do it for the money because the money part we have a good startup and we good and exit. So that is not a problem for us. But I was able to see this experiment that, okay.
+
+Q: What was the impact of the students paying for the course?
+A: The most important part is since they have paid me and they acknowledge it that we have bought previous courses in the past as well from other. But the moment we paid you $1,000 or equivalent of it, we got serious now that our money is online. We have to get every bit out of you. We have to be very aggressive with you that, hey, teach us more. We want to, if I have any question, I want to ping you and want to learn truly from you.
+
+Q: What was a downside to this intensive learning experience?
+A:  The students were like pinging me at late night two o'clock. We are stuck in this. What to do? They were figuring it out all of that.
+
+Q: What did you ultimately do with the money they paid?
+A: I just gave it as a kind of a MacBook. Didn't give it literally the MacBook just transferred the money back to their account.
+
+Q: What's your recommendation to other students regarding learning?
+A: I highly recommend students to do it. Even if you cannot hire other teacher, at least make a group, learn it from YouTube, pre-code camp or any other place. Make a group and do a hackathon for seven days. Hey, it's a seven days learning hackathon in just one room, five crazy engineers. Let's do something.
+
+Q: What is the concept being described similar to?
+A: What you're describing is kind of like an accountability commitment to ice. Essentially, like an accountability and accountability mechanism.
+
+Q: What's the effect of having skin in the game when it comes to learning?
+A: Once people have skin in the game, once their money is at stake, like, wow, I paid for this, I'd better make good use of it.
+
+Q: What are some of the most profound lessons people can learn about managing their time better?
+A: The moment you want to manage your time, the first thing you have to go is into the third person perspective mode. A lot of time you are so much engaged and so much, as they say, the closer you are, the less you see kind of a thing. So step away a little bit. First of all, that's the first thing you have to do. You have to understand where you are engaged. What's taking more time? What's less? So step away from the things.
+
+Q: What is the first step to managing your time effectively?
+A: You have to take one day off, two day off or probably three days off to actually figure out what the management looks like. You might get anxious that I'm super busy. I have to do this. You have to plug off everything and not just for a few hours, a few days actually. So step one, do that and then go ahead, watch my TED talk as well.
+
+
+--- Chunk 9 ---
+Q: How can one deal with the addictive nature of social media platforms like TikTok and YouTube?
+A: If you can't quit scrolling, at least curate your experience to get something positive out of it. Join peer groups on those platforms that offer valuable content, so the algorithm pushes you toward beneficial content like business advice or educational resources.  Focus on watching the "good ones."
+
+Q: What's the speaker's advice for managing stress and improving mental clarity?
+A: Work out at the gym without headphones, allowing your brain to think freely and fostering inner dialogue, which can be a form of meditation.
+
+Q: What advice would the speaker give to his past self during a time of financial hardship and uncertainty?
+A: He wouldn't give any advice. He believes that every decision he made, even the difficult ones, led him to his current success.  He emphasizes that hard times pass and consistent effort eventually leads to positive outcomes.
+
+Q: What is the speaker's perspective on seeking external advice from the past?
+A: He believes that any external advice from the past could have potentially ruined his journey and that the hardships he faced were crucial to his growth and success.  The beauty of hard times is that they pass, and consistent effort will eventually lead to positive results.

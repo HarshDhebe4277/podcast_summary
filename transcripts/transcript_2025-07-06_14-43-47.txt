@@ -1,0 +1,904 @@
+ Hey, Dave Schaudry, welcome to the free co-camp podcast.
+ Thank you so much, Quincy. Super excited to be here.
+ Yeah, we're excited to have you here too, man. Like you have created so many awesome courses
+ for the community over the years, both on your own channel, which has grown.
+ It's like nearly a million folks tuning into that and then on the free co-camp channel.
+ So thank you. It's been a long time coming, having you on the podcast.
+ Thank you so much. I was super excited for the whole day that, yeah, finally,
+ today we have meeting up. Yeah, and you're over in Jaipur.
+ It's pretty late there. Thank you for your flexibility in meeting with me.
+ Thank you. Thank you. Yeah, so I wanted to go ahead and start off by talking about AI.
+ You've been doing a lot of courses on leveraging AI and you have a pretty good grasp on
+ the practical limits of using AI as far as building and maintaining a code base.
+ What are your thoughts on the current state of AI coding tools?
+ AI coding tools, I would be honest here, they are pretty awesome,
+ but they do certainly have a limit. So the most people, especially students,
+ when they get introduction to the AI that I want to leverage it, I want to use it,
+ they see like, hey, build me a true app or build me this xyz and AI does all the job.
+ And this is very scary for the students that, oh, now AI can do all the job.
+ But the reality is different when you move into a different code base.
+ So we do have another company, one of the LMS, one of the pretty big one.
+ We serve around 22 million users there.
+ And the code base is pretty insanely huge, especially on Ruby on Rails.
+ And there we realize when our engineers use all of the AI, it has its limitation.
+ The context is not properly served.
+ The code that comes out is not that much of a great quality, but I would not shy away to say
+ that it has increased our productivity in delivering the features as well.
+ So by knowing the AI, surely you can become at least 1.5 or 2x of what you have been
+ writing the code, but it can't do all of the job.
+ AI is currently on a position where it's marketed heavily that it will solve xyz every problem
+ on the planet, but we all know it's not going to do that. It has its limitation,
+ context size and how much it can learn. And when you have to design the features,
+ which was not designed anywhere in the past, AI is not going to help you.
+ But certainly, it can do some of the job faster for me, which I don't want to do it anyway.
+ So in that case, it surely helps you in increasing your productivity.
+ Okay. So first of all, LMS, learning management system, you have one of the biggest
+ most popular ones used, learning management systems that are used.
+ We call it Learnest. It's serving currently around 22 million user base.
+ And it is one of the most secure 1D runs. So the technology we deal around with that is
+ cutting edge. And some of the basic features, like, how do we collect the user's requirement,
+ how we draft it into the user's stories, and then we pass it on to developer.
+ That time cut has been cut down quite a lot. It was previously like,
+ AI tools help speed up. So AI tools have sped up kind of that aspect of development.
+ That aspect from seven days to it's almost like one or two days. So we are super happy with that.
+ Yeah. And what are some areas where you don't think that AI can be really readily applied to your
+ code base, where you wouldn't trust AI to do a good job of implementing something.
+ When you have a large code base and you are designing the features, just don't mindlessly trust
+ and hit the tab tab tab or just don't allow it to write the code. Sometimes the tab feature
+ I'm much more on the leaning side that, okay, this one is better because I can select what kind of
+ code I want in my editor, but compare to if you go just, hey, cursor, hey, windsurf, you just do
+ all of that. Sometimes they do a good job, but most of the time they're going to touch the places
+ in your code base, which you really don't want to touch. And there is no way of doing that. So
+ that part I am completely avoiding in our large code base, but on the part where it says, okay,
+ we want this. So sometimes it does the good job there. So especially when you have a large code
+ base, the contact size needs to go into the LLM and they will obviously train on it until
+ unless you have different plans. And on top of that, you will just get up with the tokens pretty
+ quickly. It will say, okay, your work is done for today. Your tokens are expired. Now this is
+ day off for a developer that can happen in the middle of the day. We still have a long day to run.
+ We have to build those features. We can't just rely on the tokens or you'll be keep on spending the
+ money in buying the tokens mode and mode. So no, just relying on token is not a good idea.
+ So that's like an economic consideration in terms of like you're going to run out of
+ space in your context window. And LLM can only kind of like carry so much in its working memory
+ that it actually understands outside of like the actual underlying foundation model and like what
+ it was trained on. So if you're, if you've got a novel code base that it's never seen before,
+ it can only retain so much of that is what you're saying. Well, it's thinking about it and thinking
+ about how to write. Yes. And most of the people who actually interact with it and publicize it,
+ like make publicity around it on the Twitter, they actually use basic examples most of the time
+ and popular code bases like on JavaScript, maybe on Python. But once you touch the code bases,
+ somewhat like Ruby on Rails, which is not much discussed or something similar to this,
+ then you immediately see, okay, I do have a shortcomings there. A lot of them. So depends on
+ the popularity of the language as well. It's going to give you the answers based on that as well.
+ Yeah. So Ruby on Rails, of course, very popular web development framework. You know, 12 years
+ ago, when I started doing software development, it is used for a lot of tools. I think Reddit used
+ it at some point. There were a few other big websites. GitHub still uses it. GitHub uses it.
+ Yeah. And we are not smart. 22 million user base. We also use it. Yes.
+ But not as ubiquitous as just like, you know, no JS, for example. So no JS and modern
+ popular tool. So if I had to start a company today and I had to build some CMS, LMS, whatever,
+ I would probably choose different stack now. Would you would the ubiquity of code examples
+ and the likelihood of an AI being able to help you create future? Would that be a decision that
+ would factor in? So we choose like the most ubiquitous tools just because that's likely to have the
+ biggest, you know, prior, the most priors in terms of how it didn't choose. Like AI is not going to
+ affect my decision in choosing the tech stack. I would still choose, can it serve the purpose?
+ Will I be happy with it? And especially most important thing, which a lot of new developers don't
+ think do my existing developer or will it be easier to hire a developer on this tech stack?
+ This will be my number one decision thing. Yeah. Do you think that there's going to be
+ kind of a gradual thinning of the ranks of, you know, serious frameworks that would be used to build
+ like a mobile app or a website as more and more people start to consider how much training data
+ is out there. Like what is the quality of AI agents in terms of creating, you know, pull requests
+ going to be based on this? And then of course, what you mentioned, which is actually finding developers
+ who are already familiar with tools or, you know, languages, frameworks that have a lot of existing
+ learning resources, those, it's easier to onboard people into Node.js that it is, you know,
+ Groovy on Grails or something like that, right? I still think that's a very interesting perspective
+ that will it impact the decision of the founders to pick the stack. I don't think that will happen
+ in the next at least four or five years because the trust that my developer can learn this tech stack
+ or move from X tech stack to Y stack, if I give him X amount of time is much higher in consideration
+ than will the LLM will have the more context window it because I know a human can learn faster
+ and can deliver reliable results than just spending the token. So again, my tech might still
+ take will be that, okay, I'll trust the developers if they are much more trained compared to AI
+ much more trained, I'll go on the human side. I know he can deliver. Okay, so let's talk about the
+ hype in AI coding tools. For example, there are a lot of IDEs, there are also tools that like we'll
+ just kind of spin up an agent and it'll go into your GitHub repo and we'll start opening up
+ pull requests to address open issues and things like that. Like how far do you think some of
+ these tools are from being sufficiently mature that they can really widely be adopted and trusted
+ within a large bespoke code base like your L like your LMS's code base. Oh, we are very far from
+ that, especially when the context window is pretty huge, we're very far away from that. You know,
+ lines of code are in your code base, approximately done. Like it was in order of magnitude is like
+ millions. Yeah, surely definitely because we have been developing this LMS from last 10 years,
+ we recently celebrated our 10 year anniversary. So I think it's a pretty huge base and we have been
+ moving from backbone JS to react and then a little bit. For some part, we wrote in no JS as well
+ then came back again to Ruby on Rails. We use different databases as well. We are heavily
+ relied on AWS as well. So it's a lot of moving parts there. But I would come back onto the point
+ I don't think so we are anywhere near that I will allow an agent to touch whole of my code base
+ and I'll just sit like this. Okay, you do the job. No, I'm still panicky on that side because
+ the problem with these auto running tools is they touch the they just try to solve it
+ the problem. Whatever the problem you give it, they just try to solve it without worrying that
+ this code might actually break another part of the code base. They're just focused on I will solve
+ this no matter what part I have to touch. There was one incident where I was recording a video,
+ I just trying to explore this code LLM and I tried that hey, let's do this in the fast API.
+ And the code base said tried it two times and they said it's not working and it switched to be
+ from fast API to flask and the whole code base is trying to do a different tool. It's just like I
+ can get this to work. So hey, we're going to like you should use flask. And you don't want that
+ to happen. And this was very small to do kind of application. I was just testing it around. Now,
+ imagine when the magnitude increases, suddenly say, hey, it's not working on Ruby on Rails.
+ You might want to try Node.js. I'll write the code into Node.js, grab it. You don't want that to
+ happen. Yeah. Well, I am some of it like a like coding AI skeptic, if you will. I don't really use
+ the tools that much. I use AI for a lot of other things, but like I don't really totally trust it
+ to write production caliber code that is not going to introduce tons of bugs. It's going to
+ annoy the rest of the developer team. But at the same time, I talked a lots of race smart
+ engineers who seem to be using this. I can understand the use case of like I'm just building a tool
+ that only I'm going to use and it's not a big deal and other people aren't going to be making
+ work for other people by being lazy and using an LLM to write part of my code base for me.
+ It also changes your style of writing the code. Every developer eventually develops a writing
+ style. I like my variable names like long or I like to have my variable names in this style.
+ Or the LLM doesn't have a style. It has acquired style from thousands of developers and people
+ don't understand initially that having a developer style is really important. How you do the things.
+ Do you prefer if else in the long format or you like the ternary operators. These small things
+ matters. And when you are using AI, you don't have a style of writing the code. Recently, I did a video
+ on this. I was teaching dependency injection and the very first code that split out by the AI
+ was exactly that that violates the principle of dependency injection. So I was teaching exactly
+ that and surprisingly I recorded that video as well. So again, if you are a developer who don't want
+ to have dependency injection or have the dependency injection, you have a style of writing code.
+ Here, it doesn't have a style. Yeah. So give me an idea of a feature where you would use AI.
+ Let's say you were working in the code base of your LMS and you were trying to
+ there was just a ticket and like how does AI actually help you in this? Writing user stories.
+ When we ask a client that, hey, what are the features you are looking for? He gives us the vague idea
+ we sit down with other founders and look for that, hey, this is what we exactly want and we have
+ to design the user stories around it so that we can have a story point. AI does that really good.
+ Yeah, so user stories for anybody who's not familiar with this like this agile concept of
+ basically breaking down as a user or as like a admin, I need to be able to access this type of
+ account and modify this permission. Like it's a very specific granular kind of feature request.
+ So somebody has asked you that I want to have a to do app. I'm dumbing it down. So I want to
+ able to create a to do. I want to able to edit my to do. I want to able to market as checked.
+ I want to delete this. So all these user stories. AI does a pretty good job in that.
+ So it's good. Like kind of envisioning, okay, here are all the different things that would
+ conventionally come with this type of feature and just breaking it out into a document that you
+ can then hand to the client and say, okay, here are the user stories. Yeah, that's actually
+ writing the code. That's just helping write the spec that serves as an input for the actual creation
+ of the code. Yeah, because for the developers, well, the challenge always has been, do we get enough
+ requirement from the client? The requirement from the client always keeps on changing. This is the
+ number one complaint by all the developers. And if we are able to solve that complaint, I think
+ this is a good win. Yeah, absolutely. And if it's not too hard to just generate that based
+ because I mean, GPDs, like whichever LM you're using, has probably read hundreds of thousands of
+ those types of agile design documents. So it can probably kind of pattern match a little bit
+ and do a lot of the legwork for you. So you don't have to just sit there with a blank piece of
+ paper trying to think, okay, well, if our user of this type of app, what kind of things would I need?
+ So I can imagine it saves a tremendous amount of time. Yeah, another use case that we actually
+ use is not through the game code, but we had to write a lot of code for it. So we have this
+ internal computer lying around. We just fed a video to it. It's a pretty simple Python script,
+ which transcribes all of your video. And from that, all the transcription we use an LLM model,
+ it generates a YouTube description for us. It's really helpful to pick up what should be the ideal
+ title for the video and the description for it. Super helpful for us. We actually use it.
+ Yeah, and I believe on like free code games YouTube channel a lot of times, if you see like these
+ very granular like timestamps, a lot of times those are created by the course author. But like for
+ the podcast, I don't go through and like try to say, okay, how am I going to title this section?
+ Right, but there are timestamps on this podcast and a lot of that is done using LLMs.
+ So another thing this reminds me, whenever I send a video to you and to your team,
+ I actually put them all together in a one long video. So it's all on FCP, Final Cut Pro,
+ it's an Apple software to edit the videos. Yeah, and on the left side, I have all the timestamps
+ of my video. So instead of writing them manually, I take a screenshot, give it to Chad Gbt,
+ hey, just extract these titles for me. It does a pretty good job. I take that and send it to you
+ over the email. Yeah. And these are the kind of like things that like, I mean, even if you're like a
+ real serious craftsman and you really care about the finished product, do you really care about the
+ exact title of the timestamp? Not necessarily. And this is where AI comes in and makes your life
+ a whole lot easier, right? So I can see those as very actionable applications of AI. Are there
+ any like real code based applications? Like, like, is there any part of the code based currently
+ that is being written with the help of AI other than just using like tab completion?
+ No, nothing so far. If you don't have even, and also we don't have any reliability that we can't
+ do this thing without AI that that is not there. None of our large code chunk basis written
+ totally by AI help shortly, not entirely. Yeah. Okay. Well, that's very helpful. So there's always
+ a human in the loop kind of proofreading and deciding, and I don't like that function that's as
+ sloppy or if you do it this way, you're going to cause trouble down the road. Like you've got a human
+ who's kind of like sniff testing all the, but the great thing is I would advise this to all
+ the people who are watching the moment you know the code, you know that okay, this is how I write
+ the code. And then you see, oh, I have written this code probably 10 times. And that's where your
+ productivity increased. So instead of getting scared away by the AI, I think this is the best time
+ to learn to code because you will be able to deliver the product which used to take like by four
+ people team, you can actually stand alone, alone deliver this entire product because you are now
+ much more faster. You previously were also faster, but it was taking more time to type that right
+ it out. So learn the code. Don't get scared of the AI. AI is your companion. It will help you to
+ deliver the results faster. Awesome. Well, that's like a very balanced take. And I appreciate the nuance
+ that you've put on it. I want to dive a little more into your history. And kind of like how you
+ became this prolific teacher of developers because you've taught like millions of people through
+ your free code game courses through your YouTube channel. You've created some other courses.
+ Otherwise, you've literally worked one on one or like in small groups with students from
+ IIT, which is the most prestigious kind of public university system in India. And I am curious how
+ you got to this point that so many people were looking to you for kind of like excellent pedagogy,
+ excellent teaching. Teaching is something which I absolutely love because I do have a history behind
+ it. So when I was a kid, we were not doing financially well. And I was in this school and I had to
+ drop out this school for six months because we couldn't pay the fees of it. It was really a bad time
+ for us, the whole family. We couldn't put up enough money to put the food on the table. Forget
+ about the fees and everything. So I from the day one, I was kind of a studious guy. I was I enjoyed
+ learning the books are not like a work for me. These are like one time for me. I enjoy that. So
+ not having the education and then early childhood was probably a trauma for me. And one of the day
+ I decided that this shouldn't happen. Surely I couldn't I knew this fact. I'm very objective that I
+ can't do it for free for everything because I have to survive in my life. I also have to make money
+ out of it. Otherwise, how will I pull my family out of this poor situation? So that crafted me as
+ a teacher that no, teaching should be accessible to whatever I'm teaching. I have taught physics
+ as well only for like five, six months, but I wanted to teach that's all I wanted to do. Then I
+ saw the coding. It's very challenging. It's very fun. So I started teaching and still a lot of my time
+ goes into teaching for free. So from that trauma to make sure that everyone who even can't afford it
+ just have a YouTube watch my videos learn from it and just get your life a little on the happier
+ side. So that's where the teaching comes up. And I think it's been like 13 years or probably more
+ still actively teaching free on all of all of the platform. But I do agree that I do paid courses
+ as well. And again, I have to survive somehow. I have built companies which are totally around
+ education on one side. I teach and another of my company learners where we help another educators
+ to come forward and teach. We have teachers who are teaching farming. We have people who are
+ teaching charted accountants and we have the coders as well. So I think teaching is the only thing I
+ want to do forever in my life. So even when you're not teaching, you're kind of enabling other people
+ to teach through your LMS company. And again, LMS learning management system. So you think about like
+ anybody could potentially take out of the box platform for hosting video courses,
+ tags, maybe some interactive components. But basically this is the system that like people can
+ sign in and they can like imagine free code camp, right? Like our platform is open source and in
+ theory, you could strip a whole lot of the content out and you could put your own content in there
+ and you could host it. And it would be using the same infrastructure. But it's not really designed
+ to be used that way. But your software is designed specifically to be kind of like an empty vessel
+ that people can pour their teaching into. And then people have this kind of scalable software
+ as a service type tool that they can use to learn as you mentioned farming, for example.
+ Yeah. And we give these tools to still do a lot of people for free as well. Like
+ another guy who teaches farmers how to do farming. We incur all the cost from him. We don't charge
+ him anything. So that's still that whole thing in me built in as I was not able to take
+ the education at that early childhood. So I can't leave away all of the people and YouTube allows
+ me to do that. A lot of my content, a lot of hard work, people have seen that these courses are
+ professionally produced. So I put a lot of effort in producing them high-end cameras and editors
+ and all of that. I still says, oh, this needs to go out. This is a good information. This needs to
+ go out publicly and should reach as much as much as possible. So I give my videos to free code camp
+ and sometimes I give it to other universities as well. They also teach these from these videos in
+ their classrooms as well. So I say, go ahead. Enjoy this. Yeah. Well, walk me through your kind of
+ like early life. I mean, you mentioned the hardship that your family endured. How you had a drop
+ out of school for like six months when you just couldn't afford the fees. But like what was
+ what were your early years like? You grew up in Jaipur? Yes. And what were what was kind of like
+ your high school experience? And then the application process to get in the university, my understanding
+ is incredibly competitive because there are so many people in India, you know, kind of competing for
+ scarce seats at universities. Maybe you can walk us through that period of your life.
+ So I'll start from the early days of engineering. It's a good walkthrough of life actually. So I
+ started in after my 12th exam. This is like final year of your school. I gave an exam in that time
+ used to call it AI Tripoli, which is equivalent of IIT now. The exams are merged. I scored around
+ 5,000 or something rank all over India. So I got a seat in another city of NIT, which is like IIT
+ then little lower than that NIT. But we couldn't afford at that time. We were going through the
+ hardships. So I couldn't afford to move to another city and pay the fees and then one of the
+ college in Jaipur based on that rank offered me a whole year for free and said that if you can score
+ this much, your second year will also be totally free. I said, done. We'll get that score no matter
+ what happens. I chose a stream of electronics and communications. So I studied all about how the
+ hardware works. But studying that, I realized during the one of the competition that hardware gets
+ fried up. And you can break them easily. And that's where my interest was like, okay, we cannot
+ afford as many hardware as I want to experiment my things. And the situation of college is not that good
+ that they'll keep on giving you the hardware. So even labs, they are not really that good to be honest
+ in India. So I switched on to software. And the first time I saw the software, it was very difficult.
+ Even the loops basic for loop took me probably two, three weeks to finally grasp my head. Okay,
+ this is how it works. But the best part was, I can just scrape off the entire code base start writing
+ it. It doesn't cost me anything. So that was my idea that, okay, I can write the software as much
+ as I like. And I can keep on it rating over it. There is no cost. There is no penalty. If I make a
+ mess. So that got me into the coding part. And I learned early on a language known as Pearl. It's
+ not really popular now. And bash is scripting. I have done that. And then from there, I learned
+ a little bit of a Python Python was not popular at that time. Pearl was much higher, especially via
+ ecosystem. So what year were you learning that Pearl was more popular than Python? I mean, Pearl,
+ obviously a very important precursor to most modern scripting languages. A lot of them,
+ oh, a lot of their features and their usability to Pearl. Like Ruby, for example, my understanding
+ is basically based off of Pearl. And they just wanted to improve upon it. But what year was this
+ approximately? I don't remember. I'm really bad in remembering the years because the only part
+ because I remember that I have been teaching for 13 years on YouTube because YouTube gave me a
+ pop up notification. That's how I remembered it. You're not one of those people that like focuses
+ on the past too much. What's done is gone. What can I do? So moving on. So Pearl was good.
+ Then I saw, I had to order a book. You can't find it. YouTube was not existing at that time.
+ So I had to order a book. I have to request a lot of people. Please get me a Python book. Please
+ get me a Python book. So that's how I moved. And after college, I was much more interested in cyber
+ security. So I moved into one of the India's biggest company where we were doing penetration testing
+ for some of the big giants in India, as well as I was still teaching and they were never left out
+ that. So I requested my company that, hey, we can do a business out of it. Otherwise, the company
+ was not going to allow me if it starts. Hey, we can do a business. Then only the conversation starts.
+ Otherwise, I say, focus on your work. So I said, we can do a business of it on the weekends. I'm free.
+ So on behalf of your company, I'll go into different universities. I'll teach them how the penetration
+ testing is done. How actually it is there to work in the companies. So from Monday to Friday, it was
+ corporate work Saturday, Sunday in some part of the country, IIT Bombay, IIT Gohati, almost all
+ NIT, NIT Elabad, IIT Rudki, all of them, I was their guest lecturer for weekends, used to teach
+ for eight hours on Saturday and for all these six hours on Sunday because I have to catch a flight.
+ Then catch a flight, go back. This was a routine for almost like for three years, I guess, two to three
+ years. Wow. So you were working a normal week. And then you're flying, which is not like a
+ casual thing. You have to get on a plane. You have to go somewhere else. You have to get to like wherever
+ you're going to stay, unload, like be ready to show up, teach eight hours. And then I think you'd
+ sit like four hours this next day. And then I mean, that's like a huge workload. You had to have
+ been working at least 60, 70 hours a week. Yeah. And I enjoyed every part of it. And one of the
+ thing that it gave me is, first of all, I can teach for long hours, like three, four hours doesn't
+ give me a beat, as well as I got a lot of command over communication. Once you do this much of
+ communication with the real people in front of you, you need to make sure that your dialect is neutral
+ as well as they are able to understand you because India is a big country. There's a lot of
+ dialects within the India as well. And as the company grew, sometimes we had to teach people which
+ are not from India, people from France, from Australia. You need to be very neutral and they need to
+ be able to understand whatever you are saying. So this was actually a pretty good outcome from those
+ workshops. Yeah. And you've done a lot of traveling. I don't want to jump too far ahead, but you've
+ I think you've said you've visited like 43 different countries. So far the count is 43. I'm planning
+ to make them 45 very soon. So that's a lot of cross cultural communication. And as a teacher,
+ like communication is everything. I mean, literally the job is to take what is in your head and
+ figure out a way to get it into the other person's head as intact as possible without being too
+ colored by language or cultural differences or other things like that. Like how do you transmit
+ information? Essentially, that is the discipline of teaching. And how do you make it relatable?
+ One of the guys, one of the guys in, I was probably in France at that time or somebody, he taught me
+ that teaching is a two-sided job. One is whatever you are expert in that you have to teach. Another side
+ is learning how to teach. That opened up my mind. I was totally blown away that there are so many
+ research people. There are so many books about the pedagogy and you can learn about them. One of my
+ favorite book is Geek, Geek Pedagogy. And another one is how the best teachers do somewhat like that
+ the book name is. So you also have to learn how to teach as well as you have to be master in your
+ craft that can be coding, that can be teaching how to repair phones, whatever that is. So it's a two
+ two-job at the same time. And now the digital thing is there. So you have to be on the three side.
+ You have to learn how to record the videos. You have to record microphones and everything. So
+ teaching is not just teaching. It's a multi-hat a job. Yeah. And a lot of teaching is not
+ necessarily conducted in a lecture hall. It's conducted through YouTube or it's conducted through,
+ you know, a thoughtfully authored technical tutorial or a piece of interactive learning. You know,
+ you can you've studied electrical engineering and you could probably think of lots of ideas for how
+ you might create like a software environment for learning circuits, for example, or something like
+ that. So there's a tremendous amount of kind of I call it like instructional design. Like I consider
+ teaching as the actual kind of like discipline of like actually communicating and instructional design
+ is creating like an artifact that other people are going to use for learning. But I 100% agree that
+ you have to have the domain expertise in what you're teaching. And you also have to have the meta
+ skill of, you know, effective communication essentially and empathy and lots of other things.
+ So that is the thing which I acquired in early life that communication skills which has taken
+ me to a lot of places. Communication, I would say that hey, learn this first. This is the one
+ thing that you want to master as early as possible. And whatever the language you are going for,
+ try to get a little bit mastery over the English because it's like an API. It will help you to connect
+ with a lot of people come from a different France, Germany, India, a lot of people. So after that,
+ I got my interest in iOS development. I realized that hey, this is really an interesting thing. I can
+ just build an app and thousands and hundreds of thousand people can actually use my app. So I didn't
+ jump into web development first. I wasn't before that I was an iOS developer. So I started learning
+ iOS development and whatever the money I saved. I bought Mac mini with that because that was the
+ easiest option to get into the iOS world. And started making iOS apps for one of the company. I was
+ just the second engineer that they hired. I said, I don't know much, but I can help you out.
+ I can put relentless amount of hours in that. So even if I'm not that good, some else engineer will
+ do eight hours. I'm okay with doing 16 hours. Just get me in. So they were very impressed that this guy
+ can even if he doesn't know that much, but he's ready to put in hours. So hey, he's a no brainer
+ to hire. So they hired me and I learned a lot of things on the go. And during that, we build a lot of
+ good apps. They were like a service company which delivers app for other clients. So learned a lot.
+ And during that time, I discovered you didn't me. And the popular website where people buy and sell
+ courses like they'll create courses and the list them and a lot of them are pretty inexpensive.
+ I know it's extremely popular in India. Yeah, it was not inexpensive at that time. At that time,
+ when it came out, it was around 150 and $200 per seat. It was expensive in the early days.
+ So I put up a couple of courses there and enjoyed but realized that Indian audience cannot buy
+ the courses there because there was a credit card issue early days in India. It was a pre-era when the
+ payment gateway system doesn't exist. Stripe was the only one. PayPal tried that set. No other platform
+ was there. And India is famous for I think it's called like UDP or something. It's like OTP. It's
+ one time password. It gets on your phone. You get the information of the payment infrastructure.
+ Oh, UPI. UPI, yes. This is fairly newborn. This is fairly newborn in front of me. So OTP was
+ the previous one, one time password. You enter a credit card detail. A message code will be given to
+ you and then you can only add that. This infrastructure was not supported by PayPal. This was not
+ supported by Stripe. So at that time, we started a company learners that will be an LMS company and I
+ will be the first user of it to teach the people. And fast forward, not to bore you a lot on this.
+ That company which I started learn code online got acquired from around 1 million, 1.1, 1.2
+ million. It was a stock deal. So that got acquired. And the company who acquired it got acquired
+ by PW, which is the unicorn in India. It was 30 million, somewhat here there, a 30 million dollar
+ acquisition. So we all got exit. I served for a while in that company as well as the position of
+ senior director before that in that company, which got acquired. I was CTO chief technical officer.
+ And after that, I got acquired in that company. So 30 million dollar exit. And after that,
+ I served there as a senior director. Pretty fun. But then I came back and I realized,
+ I can teach in Hindi as well. And that bug inside me that I want to teach more. I want to teach more.
+ So I said, Hey, I'm retiring from the corporate. I want to teach full time. I want to do this.
+ So I started this new channel, Chai or code, which teaches programming in Hindi. It's getting
+ pretty popular. We are almost like 600 K within a few months. I'm enjoying this teaching is what I
+ love. And so this has been a long story. What I've been doing. Yeah. So that thanks for putting that
+ in the context, because a lot of people are wondering like, Okay, how did you get to where you are?
+ Where you have, I mean, a lot of people would say like the relative luxury of being able to teach
+ people because it is hard. It's hard to sustain yourself as a teacher. It's hard to sustain yourself
+ making like YouTube videos, even with the YouTube revenue and things like that.
+ You have basically used your career as an engineer to kind of vault yourself into this position
+ where you can, you can focus full time on teaching. And is that all you do? Like are you basically
+ just teaching all the time? Yeah. Most of the time like my 80% energy goes in just teaching.
+ But yes, we do paid courses as well because we have to survive with the team as well. Now there's
+ a lot of team and 20% of time goes into the LMS, the company that we have learned. So there we go.
+ And we still ask, we call a lot of teachers, Hey, what is the difficulty that you're having in
+ teaching? Can we build more features for you? Can we build more software to you? And this gives us
+ a unique idea. What's happening latest in the tech? Do you need machine learning? Do you need AI? Why
+ do you need AI? Is there a reason behind it? Don't tell you need AI. Tell us what is the problem that
+ you are trying to solve and will build a feature for it? Whether it takes machine learning or
+ whether it's take AI or just a pretty good old solid mySQL database can be solid like that.
+ So this is the most of the tankers. I imagine a lot of people just think AI is like the magic solution
+ everything. Oh, just use AI to fix it. Just AI. I heard that AI uses a verb the other day. But in
+ fact, a lot of off-the-shelf tools that are tried and true, maybe much better for those types of
+ situations. So now that we've established kind of like what your your journey so far has been
+ as a developer like from an electrical engineering student to being CTO, to being a teacher and
+ just kind of helping maintain this existing LMS project, learners that you've been working on
+ for the past 12 years. How many years? It's 11th. That's what I remember because just we had a
+ celebration for 10 years. That's the only reason I remember it. Yeah, there has to be some notification
+ otherwise it says she doesn't know how long it been. I sometimes I begin hard time in somebody
+ been asking me, what's your age? I had to do calculation. Yeah, let's see. I was born in, yeah.
+ I've definitely been there as my age creeps upward. So I want to dive into some of the things
+ that you've learned from teaching students because so India of course has more engineering students
+ than like maybe any other place in the world other than maybe China and India have comparable
+ volume of like engineering students. And of course, computer science is the most popular major
+ I believe in India. And I think a lot of that is because as you said, like code is infinitely
+ reproducible, it's cheap to like screw up something with code and just go back and fix it or
+ you know, revert state of get you. You've started to get course on free cooking and PoE.
+ And as a result, there's like little, you know, risk in experimentation and so you can just
+ really treat it as a sandbox where you just knock it down and your castles are building again
+ and it's not a big deal because you've got like the same sand you just re-structured it, right?
+ But with actual electronics, like you studied in school, there's a physical cost. There are materials.
+ Things can break in a state that is not salvageable and you have to throw out the board. Any number
+ of things can happen, right? They can impede your learning. But as long as you've got, you know,
+ a computer, you don't even necessarily need an internet connection. You could just be in there and
+ like, you know, on a plane disconnected from the internet, like writing code and running tests
+ against it and thinking about what you're building, right? So it is a much more accessible tool
+ and then you can scale it, you know, without having to like do a production run and make sure
+ that your chips are exactly as you want them and have them physically shipped to like people that
+ are going to use them. No, you can just deploy through the internet. You can deploy through the
+ Apple App Store. I know that you've done a lot of mobile app development. You can just put it out there
+ and then people can start downloading and immediately using it. So do you think that that partially
+ describes or explains why computer science has become like the dominant major in India?
+ See, India is a country which is still evolving and there's a lot of people who are still not
+ financially stable. And you just look for what is the first thing that can get me financially
+ stable. And I think that is why most of the people are choosing computer science because I do
+ understand a lot of people think go for the passion, look for what interests you. But when you don't
+ have food on the table, you look for the first option that can get you out of the poverty line.
+ And that is why a lot of people look forward that if I can get into computer science and I can learn
+ to code, at least I can get this much of the package so that I can help my family and make myself
+ stable. And a lot of companies which evolved in India over the last decade are mostly software-based
+ companies. They have been outsourcing their software development skills to a lot of a US-based
+ client to the Australian clients. So that is where the need was there. Companies require more
+ engineers. The engineers were looking forward. What's my first way to get out of this poverty line
+ and how can I make money? That is how it evolved. So I think that is where the computer science
+ students are going there. And I think it's a good choice altogether. Computers are always good,
+ there's no brokerage, cost or anything like that. But one thing I would like to mention up here is
+ there are a lot of people who enters into the computer science. They study for it for a six
+ month or so. But the drop rate that I can't do the computers is significantly higher. People move
+ into different roles that I'll probably move into design. I'll probably move into product manager
+ or something. The year that they stay in actually writing the code, this duration is very, very
+ small. And that bothers me. People should be writing code even if they have moved into more
+ managerial positions. So please go ahead and write that. So that's the first part of your question
+ that how is it going on? And another thing that I look forward is that hey, don't worry about the
+ schools. Just because I studied electronics or somebody studied computer science, the value of
+ what you get in the college or the professor is teaching in the college is now that is not that
+ significantly higher at this point. You have internet access, you have a lot of great teachers
+ teaching you online a lot of stuff. So I believe now is the point that anybody can just jump in
+ and start writing the code. So please don't hesitate. I'm a very biased teacher towards the code.
+ I want everybody to learn the code. But it's fair. I'm biased towards that. So take my advice with
+ a grain of salt. I will always encourage you to write the code. But this is not the only thing.
+ Look forward. What can actually give you the nearest monetary advantage? If your ecosystem is
+ designed for the companies like in India, it's all ecosystem design. We have the fastest food
+ delivery system that delivers food in five minutes. Now imagine the scaling that they are working on.
+ A amount of orders that India is a country of scale. And on top of this, the greatest advantage
+ that every single user in computer science is VCs, venture capitals. They are literally
+ sponsoring you, not directly, but indirectly. Let me tell you how. You have a free way of writing
+ the code. You can write that code in WIM or in VS code sponsored by somebody. He's just used
+ this after for free. You can write this. You can use next shares or probably you can use Ruby
+ on rails. Somebody sponsoring that framework. Somebody's actively building it. Once you have built
+ this, let's just say next shares app, you can host it on Warsaw. Somebody has paid for
+ one of Warsaw. You don't have to do there's enough generous free tier plan or maybe use render
+ or maybe any XYZ service or get into AWS, get the free credits. Somebody has already
+ paid for you. And you have the ability, this magical power of building something built for something,
+ like your nearest gym or maybe your nearest juice shop or nearest food capital or whoever is selling
+ the food. Just build for them and charge them that, hey, I'll charge you X amount of money.
+ You can literally build an entire business or software absolutely for free. Thanks to the venture
+ capitalists. Yeah. And this is something that I encourage like there, like so many action more
+ pieces would like to give there. So I'm going to recap. First, India is the country scale. I love
+ that because you're right. Like there's just like a ton of people they're trying to get a lot of
+ stuff done. Everybody's busy. There are so many experimental startups going on and many of these
+ are funded through venture capital or they're using tools that were developed with venture capital
+ money. As you said, you mentioned some of the hosting providers, some of the web development frameworks
+ and mobile development frameworks that are essentially paid for by large companies that are
+ developing them. You can just grab these off the shelf tools. You can use them. And one of the things
+ you said about going out to your local juice shop and just being like, hey, can I build something
+ for you? And then getting essentially building a stable of contract work, a bunch of freelance
+ clients and being able to pay, you know, to keep a roof over your own head, maybe feed your kids
+ with that money. And essentially just leveraging the fact that there's so much free stuff and
+ software or that's heavily subsidized. I really like that. So what advice would you give to a
+ university student who didn't get into like the most elite institution or maybe they got into a
+ good institution, but they can't get into the computer science department. Like that is pretty
+ common here in the US, for example, you get into a good school, but there's like a waiting list to
+ get into the CS department because everybody wants to be in the computer science department,
+ right? Because again, that's where like the highest compensated jobs generally are is that they
+ go to computer science majors. So what would be your advice to somebody who is at a school,
+ but they don't necessarily have access to the very best profs or the best, you know, mentorship
+ that the university could provide. How can they use the internet to supplement?
+ So it's a really simple advice. See, the only advantage that you get in the top tier IIT or an
+ equivalent in US now is the peers, the ecosystem that you get because you have worked really hard.
+ That's why you have gotten to IIT. The other person also has worked really hard and he also got an
+ IIT. So as long as you both are on the same level of putting in the effort and putting in the hard work,
+ you will be gelled up quickly. You will become friends quickly. And it's for some reason because
+ of the competition, you are not able to crack IIT. The only thing that you're missing is peer
+ group. Your fellow students who are actually together with you were equally passionate about
+ something that you want to do. So the only difference which I have personally seen in the IIT
+ and the non-IIT is the amount of effort that IITians put on a regular day versus the people who just
+ say I don't want to study much. I'll just go and have fun outside. But in every college,
+ there are some students who say, okay, I was not able to get in that college but I'm equally
+ hardworking. I'm equally passionate. So the advice is find your peers. And this problem is
+ solved by Twitter a lot, discord a lot. And there are other community groups and meetings that
+ happen offline. So find your group. Where are the people who are equally passionate just like you?
+ And that's it. You have supplemented yourself and you have moved yourself into a group who are
+ equally hardworking, who are equally passionate. You can find them in the comments section of YouTube
+ sometimes. You can find them on a discord channel. You can find them on Twitter. So follow them and
+ the algorithms are pretty good. They will actually keep on pushing you in that zone that where you
+ find they like-minded people and just get into that. And apart from this, the whole knowledge,
+ even the best of the best teachers from IITs and from NYU and all these, they are also on YouTube.
+ They are also sharing their information that tweeting it out. They are making YouTube videos.
+ So whatever the best you can learn, the information is not restricted now. The only thing that is
+ restricted still is the experience. So get enrolled in yourself in that experience, whether that's
+ through the discord, offline hackathons, online hackathons, get into that hardworking. I'll work
+ really, really hard in that. And another thing which every, every single student should do if you
+ are in computer science or you have a tiniest interest in the computer science and especially in the
+ world of AI, build your own product. Not a project, product. At least attempt high, I will replace the
+ discord. I will replace the base code, base camp. I will replace Twitter or I will replace have a
+ crazily passionate product, which you are super serious. You buy a domain for it, not really that
+ of expensive one, probably $3, $5, you can get enough of that. And just use leverage, the frameworks
+ and the hosting provided by the free or just invest a little bit, when you invest a little bit,
+ $5, $10, you will be more passionate about that project. But at least have one ambitious project
+ that everybody says, oh, you can't beat base camp, but they say, oh, I will try at least the
+ least that you will get out of it. You will learn done of thing. You can use it as a portfolio project
+ as well as if it works out, that's the best you will have the money of it. If it doesn't work out,
+ you will be hired in a company base that, oh, this guy, if he can build this much, he surely can
+ build some of the feature for us. And keep that project always alive, work on it on weekends
+ or once in a month or something, keep that alive. It will keep you alive in the latest of the tech
+ what's happening, as well as will keep your interest as a software developer. And this is what I miss.
+ Everybody keep on asking me, hey, what project should I build? Should I build three project for
+ my portfolio? Should I build a booking system or a owe your clone or maybe a hotel booking system?
+ I say, no, you don't need five or 10 projects or three projects. Just build one, but it should be
+ crazy good. And it should be alive for one year, two year, three year. There should be an attempt
+ that I want real users on this project. So turn your projects into product and you will have a
+ really good time and software. So many things don't impact there. So first,
+ and apologies if you can hear like my neighbors mowing their lawn. So there's like a rumble in
+ the background. I don't know if it was getting picked up. But find your peer group. It doesn't really
+ matter whether you got into the most elite school if you can talk to those kind of like hard working
+ motivated people who did. And you can do that through online communities, you mentioned like
+ Discords. You could go to hackathons. I've been to a lot of student hackathons recently.
+ Just serving as a judge, serving as a speaker, kind of hanging out, just meeting people,
+ talking with them, learning from them. And yeah, like a lot of those people weren't necessarily
+ enrolled at the school that was having the hackathon. A lot of times anybody can show up and just
+ participate. And you may be able to get into other events. I've gone to lots of universities
+ and like just sat in as like kind of like auditing a lecture or like the professor will say it's
+ open to the public. You find out about those things you go there. You're sitting among the highly
+ motivated, you know, hard working diligent students who got into that school. And you can basically
+ just take notes alongside them and ask questions and talk with everybody too. So that is like a really
+ cool kind of observation that it's not the content of the lecture. It's not the actual information
+ that is everywhere. And you can just get that on command. It's the people essentially. And what
+ you can learn from those people and those relationships you can build. The other observation you had
+ is instead of building a lot of different projects, just build one and don't make it a project,
+ make it a product and make it with the intention of having a lot of users and maintaining it
+ long term and continuing to maintain one code base instead of just jumping from one beginner
+ project to another and kind of like, you know, reinventing the wheel every time. Just get
+ small, small, small breakage here as well. Initially, it will take you two, three different projects
+ to work on with because you don't know the code and building the full one. So by this means don't
+ interpret as that I'm saying that hey, don't follow the tutorials which says, hey, build this and
+ relax. Initially, it will take you two or three of those projects so that you get the whole idea
+ of how to build a project and then try to have your own product. Okay. So kind of like stair step
+ your way up through the tutorial projects to the actual main event, which is the project that you're
+ going to maintain long term. Yep. Awesome. That is super actionable advice. I really appreciate
+ you sharing that. So have you learned anything about the way that higher education works in India
+ was surprising. Like, wow, that's really that's like how it still works.
+ Very surprising actually. So I still didn't submit my thesis. I'm not still a PhD and I'm not
+ intending. I didn't have zero interest in submitting that because first of all, I didn't find
+ much value in it. The value that you get used to get having a master's was significantly higher
+ like 10 years ago. Now, it's not that much valuable. And I have a couple of reasons for it
+ and I'll be very open. Please feel free to judge me on that. Yeah. And I just want to emphasize,
+ you have a master's. I have a master's. We're not like anti graduate school, but I love sobering
+ takes. Please. Yeah. I still am a pro guy of education. I still say is nobody should drop out if
+ you have gotten finished that. I'm still on that take. But what I've realized is, first of all,
+ a lot of colleges are there, but the amount of effort that should have been put in paying
+ the teachers was so much cut off that the teachers don't have any incentive to update themselves.
+ If you're going to pay a teacher bare minimum and you're going to put all of your money in just
+ having the best of the infrastructure, the building should look shiny and you're not even giving
+ the teachers an assistant so that he can take that attendance and do the regular chores.
+ And he's doing everything and is being paid very less. He doesn't have the motivation to learn.
+ If the teacher is not motivated enough to learn and explore the things and have his own free time,
+ he's not able to deliver that specific knowledge to the students. What's the result?
+ Student feel like I'm not really interested in sitting in this class. I probably will go out and
+ watch a YouTube video that that guy has put more effort and more energy in delivering that video.
+ I also felt the same during the Masters and PhD. Some of the teachers were just downloading
+ the presentations from XYZ schools and give it to me without even reading it once.
+ Hey, this is the material you just read it. I said, what's the point of being here?
+ If I had to just get this PPT, the PowerPoint presentation, I can just download it myself as well.
+ I don't come here for a 20 kilometers ride to get this PPT. You could have mailed me as well.
+ And you are not adding any value to it. You are not able to do all of it. So that's one take that
+ it's not really good because the teachers and the mentors there are not good. Apart from that,
+ like a lot of time years ago, this was your second chance of getting into the IIT. If you haven't
+ got into IIT in your bachelor's degree, you again can give an exam and get into the IIT and get a
+ tag in the Masters. But realize later on that I just want to point like just stop there and point
+ out that like it's very hard to get into Harvard as an undergraduate. Very hard. It's maybe like
+ two or three percent of people who apply get in. And many of those people who apply have like
+ perfect entrance exams, like what we call the SAT in the US. And still don't get in, right?
+ But if you go to the Harvard graduate school of education, you can get into a Masters of Education
+ degree program and they admit like half the people that apply. So it's much easier to get a Harvard
+ degree if you're pursuing as a graduate degree. And of course, it's generally more expensive. And like
+ the graduate programs are kind of like a cash cow certainly the Masters are for a lot of these schools.
+ But when you said, like the graduate degree is kind of like a second chance of getting a prestigious
+ degree, I immediately jumped to that disparity like two to three percent admission versus, you know,
+ 50 percent admission rate. I do my observation. I have a lot of free time. I do have observation.
+ Okay. So this is how it works with a lot of Indian schools as well. Or is it how it works?
+ Exactly. So like this. It exactly works in a lot of countries. I have traveled to a lot of them.
+ And I asked these questions to general public when I was sent by near them in a park or in a food
+ restaurant. I just like to ask these questions. It happens exactly same in all over the world.
+ It's much difficult as a graduate program. It's very difficult to get into a Masters like much easier
+ to get into the Masters program. So coming on. So once a student gives used to get 10 years ago, this
+ Masters program again, it was easier to get in but still you get the access to these great professors
+ their network and the companies who come to your campus to hire you. They also used to give a chance
+ to the Masters students and it's an easy placement opportunity. Now the things are changed.
+ A lot of companies are not allowing the Masters student to sit in their campus placement.
+ They say, no, we only want graduates of this year. So only bachelor's program. So that is one drawback.
+ Apart from this, the value edition by the teachers that has to happen is not that up to the mark now.
+ Something needs to be done. It's not really a value edition. I didn't got much of the value edition
+ into the Masters. It was certainly the books were good. The Slebus is really nicely because it's
+ being marketed. So the Slebus which needs to be marketed needs to be really great. And I just followed
+ the Slebus. I got the book from online and all these orders from Amazon studied them. I enjoyed
+ that. I learned a lot of my machine learning and neural network during my Masters enjoyed it. But
+ I realized that the papers that I'm giving the exam papers and the teachers, they're not qualified
+ for teaching this material. They don't have that expertise. They haven't put up this effort.
+ To actually build that there's no challenge in it. And if you don't have a challenge,
+ you don't learn anything. So I am not really a pro guy. Now I don't advise people to,
+ hey, you should get it. This is the only path. No, it's not the only path. Now you can
+ build the best of the best product. Shoot it up on the Twitter. It can get real users.
+ It's not a great value. In the previous time, education institution used to fund your projects as well.
+ Like, hey, if you build good, we are doing that. Now instead of doing that, they have become an
+ incubation hub because the startup is the new thing. So whether you have studied from that
+ campus or not, you can still enroll in that incubation hub. So again, if you can find peers through
+ the other route, why to go this route? The whole idea is to get into the peers ecosystem. So that is
+ what is happening. Another thing that is happening in India is now it's much, there are different
+ routes of getting into these IITs because in India, IIT is such a prestigious symbol that you
+ flaunt it off throughout your life. This is kind of a thing. And now the education newer system is,
+ you can enroll into different sort of tech companies and these companies have a tie up with the IITs
+ and you can get a degree from that. So you literally have never been into the campus. You have
+ never been into that peer group. So they are kind of pimping out their brands.
+ These very prestigious brands are deluding it by just letting anybody give them much of money
+ to get it. That's wild. That's really happening. Very new. It's being one year or two
+ year only, probably little more than that, but I've been keeping a track of it because the company
+ acquired us. It's a unicorn in India and there are others as well. It's not the only they are
+ doing it, but a lot of now private ethics can actually open up their colleges and the college can be
+ just in one floor, not even a campus. You can literally buy a lease out floor in a corporate
+ office and call it as a campus. I don't know how it is working on how it is not working, but
+ you can just get it. They will get exams and everything being like you obviously, you give the
+ exams, but it's not you are being in the campus. And same is happening, almost same is happening
+ for the prestigious management degrees as well. We call it as IIM for management. Same is happening
+ for them as well. You never step your foot in the campus. You have never met your peers. You have
+ never grinded that, but you take this route. I don't know how much fruitful is it going to be in the
+ future, but it is happening. Well, it seems like a horrible long term. You know, I can't admit,
+ like free code camp, if somebody said, Hey, if you just pay this company a bunch of money, you
+ can get the free code camp cert without actually having to go through free code camp. We would never
+ engage in something like that. And yet, that's pretty much, it sounds like that's what a lot of
+ these prestigious university systems are doing. I do know that in the US, we had this thing called
+ Trilogy, which was this company that would go and pay the university some money so they could pretend
+ to be their coding boot camp, even though it was an unrelated company. And then the university,
+ you'd go to like a Rutgers state university. We're pretty prestigious school in New York,
+ and you'd attend this program. And you didn't find out. It was in the fine print. This isn't actually
+ Rutgers. This is a different company, but we're on Rutgers campus, and we gave them a bunch of money
+ so we could basically use them in the marketing and stuff like that. But these kinds of agreements,
+ they dilute brand equity. And it's just like really bad for a long term. I can't believe
+ that's happening. That's crazy. People don't understand the whole point why IITs got popular is
+ because not because they are IIT because the people who studied from there, they were extraordinary.
+ They understood the concept, they delivered the knowledge so well. That is why their school got
+ popular. Now imagine if same amount of people who don't understand the concept or not that hard
+ working or not that brilliant, they will get out. What will happen 10 years from now? Right now,
+ you get a lot of advantage by saying that I am from IIT or I am from NYU or I am from Harvard,
+ but eventually find out that there are two kind of people in these institute. One who have actually
+ studied there and are brilliant and another one who are just there, but there is no way to find out
+ how you are going to judge an IIT from 10 years from now. Yeah, so essentially there is going
+ to be a dual system essentially where the IIT and people have to put in parentheses undergraduate
+ like admitted or some kind of way to differentiate. And then people who aren't able to claim that
+ eventually employers will figure out a way with their application tracking systems or something
+ like that to filter out people who seem like maybe with machine learning models will figure out
+ okay, how likely is this person actually tested really well and had met all the requirements and
+ got into the real program and how likely is it that this person just paid somebody a whole bunch of
+ money? Let's use A.A. to solve this problem. Yeah, but it will eventually be solved and eventually
+ maybe the universities will be able to get off scot free because like it's just like a work
+ like they never formally addressed the fact that their brand was alluded to, but maybe the actual
+ proof in the pudding is in the eating, right? Like if they're actually hiring candidates who
+ win through the traditional path as opposed to the paid, you know, the bribe path. I was just
+ calling bribe path. I don't it's not like I'm not sure how to word it, but I mean essentially
+ you're bribing the university to give you some of their brand equity to be able to have that halo
+ effect. And there is there is always a reason behind it. What I loved about the people as a
+ psychology and everything. See, my right is your left. Your left is my right. So there's always
+ a perspective. Everybody justifies that system. So the way how justification comes from the companies
+ who are doing this collaboration with the universities is, hey, these universities have outdated
+ slavers and their teachers are not really that well-trained, which I agree with that. So they say
+ is that you come onto our campus. We'll give you the real world knowledge which you have. We'll give
+ you the like a long four year running coding bootcamps. We'll teach you all the machine learning
+ and data science and data structures and whatever you base the long slavers is. We will prepare you
+ much more for the real world so that you can have a degree as well as well as you are prepared for
+ the real world. So I like perspectives because in perspective everybody's right in their own mind.
+ Yeah, yeah. But I mean, I can't help but think like, okay, what you just described, that was like,
+ that used to be you create your own university and you build a reputation up for just being better.
+ I mean, there are lots of engineering schools that cropped over the last 50 years in the United
+ States that just aren't really good schools. And they didn't need to take some weird shortcut where
+ they like took somebody else's name and made it. They just went through that path. But I guess
+ in the United States like nobody's creating universities anymore. And maybe it's the same in India.
+ Like maybe there's just too long bureaucratic of a process. Yeah, it's a process to have your
+ universities. So it's better to have a tie up and the students who are getting into those four
+ year program, three year program, they probably can have a degree as well as a safe side as well
+ learn. So again, what I really like about is IITs might be saying, I don't know the official
+ statement from them, but they might be saying, hey, not everybody can get into our program. So we
+ are giving an opportunity others to learn and have our degrees, something. So everybody's right
+ in their own mind. Students are saying, okay, if I'm not able to get into it, at least I have
+ another chance. The colleges, the universities, the middlemen are saying, okay, we are teaching in
+ the real world. So everybody's right in their own context. It's extremely generous of you.
+ It's extremely generous of you to like try to like even empathize with the decision making
+ going on for me. It just seems brazenly, you know, cash grabbing. I mean, it's like they're
+ getting their cake and they're eating their it too. They're getting the money for these companies.
+ Over the years, and especially with the traveling, it has forced me to understand the perspective
+ from every side of it and see that, okay, if I am at your position, how do you make it correct?
+ And I've realized everybody's right in their own mind. Everybody's a hero in their own head. So
+ I always try to get into that picture as well. And then see, okay, let's see how it goes.
+ Yeah, even history's biggest villains probably had some sort of like justification in their mind
+ for going down with that. Everybody is hero in their own head. Even the somebody who's writing
+ the meanest comment right now in this just podcast, he has his own reason to write it. So I said,
+ probably that gives you more dopamine. So probably it's okay. Well, this has been a lengthy
+ discussion of higher education in India. And this was not planned like it's just kind of
+ extemporaneous discussion. But I want to talk about your tutoring of students. You have all these
+ prestigious university students, they've gotten into these programs. And yet they know that the
+ pedagogy at the university and the methodology and all this is kind of like dated and it's not
+ necessarily the best. But they know that you're an extremely experienced teacher and they can
+ find that out because they can watch your videos and get it like a taste of like how you teach.
+ And you had a bunch of them approach you students at like an IIT university and they said,
+ hey, can you like teach like a seminar? Essentially like can we give you can we like fund you
+ sitting down and actually teaching us and my understanding is you're like no, no, no, just watch
+ my videos. I don't do private teaching, but they were able to convince you to like essentially teach
+ a cohort directly. Is that accurate? Yeah, it actually happened. So these were just like five or
+ six students, probably six or seven, something like that. They asked me that hey, we want to learn
+ the subject and we want to pay you and I said, money's not the problem that has never been. So
+ they just convinced me that instead of teaching us with the regular route, can you teach us like
+ seven to eight hours? We'll be sitting with you live. And can we just finish this topic in just
+ four days, five days instead of taking a month long of it and you just go through it and give us one
+ day break. You teach one day, give us a break. We'll sit that. So what these students, they were
+ they're still within touch with me and the WhatsApp. What they did is they went into a single hostel room.
+ That's why I'm saying peer learning experience is the most important. They all decided that we'll go
+ up into single room and we will just have this crazy one week hackathon of learning. We will hire
+ the best mentors. So they approached me, hey, they want to do this program and you teach us this thing
+ and we'll pay you good enough where each student will pay you one lakh rupees or something. So we are
+ actually focused on that. I said, okay, you go ahead and do that. So five lakh is not really a big
+ money for me. It's very, very okay. It's for me. But for a one student paying this much of
+ amount of money, it's pretty huge. Yeah, this is equivalent to like one thousand U.S. dollars.
+ So put things in perspective. If you were to get like a private tutor and they were really good
+ in the United States, you might pay like a hundred dollars an hour. So like 10 hours, that would be like
+ a lack essentially a private instruction. Now, if it's a smaller group, maybe people do like a
+ group class and they pay like $50 per student per hour or something like that. And that's across
+ many different disciplines. So like if you're doing piano class, if you're doing, you know,
+ foreign language class, if you're doing ballet, any number of things you probably pay maybe like
+ $50 to $100 per hour for a course. So it was just a five or six students. They all came in and
+ started learning. They said, you teach us one day for six to eight hours, then give us next day
+ as a break. We will sell study in the group in the hostel. Then again, next day you come up with that.
+ I said, I've never done this kind of thing. Let's experiment it. How does it go? And I was so
+ impressed by their progress because they were constantly in a group. Everybody was teaching each
+ other. I realized, oh man, this is so good. And by the end of the like seven days or eight days,
+ they were able to learn so much. I was so impressed. We built a good product out of it, a good project
+ and everything. And then out of the end of this, I gave them a hackathon, online hackathon. Now all
+ of you five or six of you have to build this. And they were able to build that complex thing within
+ like three or four days. I gave them a week, but they were able to deliver that in three or four days.
+ And I, all the prize money that was that they paid me. I gave that back as a prize money. It's your
+ special reward for this. So I said, if you give this, I'll give each one of you a MacBook. So
+ as well. Yeah. I mean, that was like about balance out how much they paid you. That's cool.
+ I didn't do it for the money because money part we have a good startup and we good and exit. So
+ that is not a problem for us. But I was able to see this experiment that, okay. And the most
+ important part is since they have paid me and they acknowledge it that we have bought previous
+ courses in the past as well from other. But the moment we paid you $1,000 or equivalent of it,
+ we got serious now that our money is online. We have to get every bit out of you. We have to be very
+ aggressive with you that, hey, teach us more. We want to, if I have any question, I want to
+ ping you and want to learn truly from you. So that seven days I think was one of my also very
+ regrets. Don't want to do it again. The students were like pinging me at late night two o'clock.
+ We are stuck in this. What to do? They were figuring it out all of that. But the good part is
+ end of the day. I didn't charge them anything. I just gave it as a kind of a MacBook. Didn't give it
+ literally the MacBook just transferred the money back to their account. So that is how it went. But
+ it was a very good experience. I highly recommend students to do it. Even if you cannot hire other
+ teacher, at least make a group, learn it from YouTube, pre-code camp or any other place. Make a
+ group and do a hackathon for seven days. Hey, it's a seven days learning hackathon in just one room,
+ five crazy engineers. Let's do something. Yeah. So what you're describing is kind of like an
+ accountability commitment to ice. Essentially, like an accountability and accountability mechanism.
+ Once people have skin in the game, once their money is at stake, like, wow, I paid for this,
+ I'd better make good use of it. There's something free cooking. It hasn't really been able to
+ tap into because we're free. But a lot of people have had like ideas like, oh, you should make
+ this thing where I can like, you know, if I don't do free cooking for a week, then I get penalized and
+ I have to make a $20 donation or something like that. But that we don't want donating to free
+ cook. You have to be like a negative thing. Like, we don't want it. They're the negative
+ association. They have my screwed up. Now free cooking has got my money. So we're still fine
+ turning that. But like, I definitely want that for many people. Courses still have a negative vibe
+ to them. Everybody will say, don't do courses. Like, people will say, hey, do books. Read books.
+ Books are good. They're very generous. And the moment you say, I have a paid, oh, you are a
+ course seller. Come on. Yeah, people pay for books. They won't necessarily pay for a course.
+ This is just a phenomenon. The authors who have been writing books, they are now making courses.
+ This is digital age. Yes, of course, there are bad books. Yes, of course, there are bad courses.
+ But there are great books. There are great courses. Yeah. And I will say that there are paid
+ books and there are free books too, just like there are free courses. Free cooking has published
+ dozens of free books on different topics. Book is just a medium. It's just a text as opposed to,
+ you know, video or interactive, which is kind of like our cup of tea is just like figuring out a way
+ to get people actually fingers on the keyboard. But yeah, I 100% agree and I can understand where
+ you're coming from. Like, wanting to get people to actually kind of put their proverbial money
+ where their mouth is, even if it's a token amount, right? Like, if it's the equivalent of like,
+ you know, what you'd spend on a night out or something going, going eating dinner and going to
+ like a movie or something like that, right? Like that has weight. And I certainly like every month,
+ like, oh, am I going to pay for Netflix this month? I'm actually watching it, right? Are we actually
+ using it? Can I justify continuing to use it? And then, oh, well, I'm paying for Netflix, so I might
+ as well sit down and watch this show with my kids. You know, that's just kind of like the way the
+ mind works is once your skin is in the game, so to speak, or once you've already paid to use your
+ more likely to use it more. So that is a phenomenon that I want to figure out how to harness to get
+ people to use free cooking more, which is my real goal. Not necessarily to get more donations,
+ but just to help people learn more. So it's not that, please use it. Yeah.
+ Well, I want to talk about time management. That's something you have done. A tremendous
+ amount of work on you create. You publish this TEDx talk a while back that I enjoyed watching.
+ And you have a lot of strategies, a lot of observations about productivity and time management.
+ What are some of the most profound lessons that people can learn if they want to get
+ serious about managing their time better? The moment you want to manage your time, the first
+ thing you have to go is into the third person perspective mode. A lot of time you are so much engaged
+ and so much, as they say, the closer you are, the less you see kind of a thing. So step away
+ a little bit. First of all, that's the first thing you have to do. You have to understand
+ where you are engaged. What's taking more time? What's less? So step away from the things. As I say
+ to my wife as well, quite a lot, that the whole world is like a television. The moment you move
+ your neck a little bit tiny degree, there's a new channel happening. There is a new channel out there
+ in the world. So go sit out in the park, have a notebook or something, remove yourself all from
+ digitally and think about how does my work look like? How does my week look like? How does my month
+ look like? If you're not going to step away from it, you want to actively manage it. It's not
+ going to work. You have to take one day off, two day off or probably three days off to actually
+ figure out what the management looks like. You might get anxious that I'm super busy. I have to do
+ this. You have to plug off everything and not just for a few hours, a few days actually. So step one,
+ do that and then go ahead, watch my TED talk as well. That is pretty good. All that I have summarized.
+ A lot of books that are published as of now, not all of them are bad, but a lot of books are
+ published as of now. They have been published in the pre-mobile era, pre-tick-talk era,
+ pre-instagram era. They didn't face the problem of the reels. So there is no solution of that
+ reels in the book, the addiction of scrolling and endless crawl off Twitter or maybe Instagram.
+ That was not there. So there is no book or no guide that can help you in that. So you have to be
+ modern in that perspective. So what I said in my TED talk is if you cannot leave it, just master it.
+ So if you cannot leave the habit of scrolling it, at least be in that peer group on Twitter
+ or in TikTok that at least you are getting some value out of it. So automatically the algorithm
+ will push you towards watching business advices or maybe advices on how to teach better or get
+ into the Twitter zone where the spaces are happening where people are discussing about if you're
+ interested in that politics or maybe if you are interested in business, go in that. So if you
+ cannot leave it, at least master it so that you are in a better group, we all have tried to
+ detox ourselves from the TikTok and I'll delete. Doesn't work. Doesn't work. All of our back in the
+ YouTube game, instead of endless crawling, at least be mindful of what you're doing. It's not
+ going to go away. It's very well engineered by the people engineering team as well as psychologists.
+ So you cannot get away from the reels. So at least watch the good ones. That's my number one
+ advice. And apart from this, hit the gym. Workout is the most important thing. And if you have the
+ luxury to be in the gym at the odd places, I know a lot of you don't have it, but if you can be in
+ the gym at the odd places so that you can work out without the headphones and nothing. So your brain
+ will have the ability to think. When you work out in the gym, you have a lot of thoughts and the
+ thoughts will come when you're not listening to the music or not listening anything. Just the
+ whole quietness. You will find that you talk to yourself quite a lot and then you think for it.
+ So talk to yourself a lot. That is exactly the meditation for some people. For me, it's gym. I
+ don't do active meditation, but for gym, I don't listen to any music. I'm just on my own,
+ smiling, enjoying. Oh, this can be done. Oh, I can do this in the next bootcamp. Oh, this could be
+ a nice video for the YouTube. Talk to yourself. So these are some of the actionable advice you can
+ have and rest are there in my TED Talk. You can also watch that. Yeah, that's awesome. So I just want
+ to recapitulate that because this is really good advice. Even if you can't necessarily break away
+ from using platforms like TikTok or YouTube or scrolling through Reddit or Twitter,
+ at least take the time to curate that experience so you're getting something positive out of it
+ and you're not just, you know, doom scrolling essentially or or just kind of like, you know,
+ mindlessly kind of like flicking from one thing to the next. At least try to structure it
+ to where if you're going to have that voice like that, it's like that there's some positive
+ usefulness for it. The other thing you said go into the gym. It's interesting you say go to the gym
+ without any sort of music and just be present, just be there, just be focused and the thoughts are
+ going to come out. Your inner voice is going to come out. You're going to start talking with yourself
+ using the gym as an alternative to meditation. I don't meditate either. Like I've tried it. It's
+ just isn't for me, but I love just going for long walks and thinking. And of course I go to the gym
+ and usually I do listen to music from the gym because I don't want to pump myself up. But
+ I mean, it looks there. Yeah. Well, I want to ask you one final question because we've learned so
+ much from you during this conversation. But you mentioned earlier on that there was a time when your
+ family was, you know, struggling to be able to pay for you to have tuition and that was a time
+ I imagine of great uncertainty for you about the future. If you could send some sort of message
+ back to yourself some advice or just maybe like one sentence back to yourself that you think
+ could help you make it through that time and maybe help accelerate your arrival at the destination
+ you're in right now. What would it be? I have moved into a mindset and mentality that if somebody
+ asks me anytime that hey, can you go back in time and fix any one thing? I said, no, nothing. Is
+ there anything advice you would like to give? I said, no, nothing. Whatever a decision I have made
+ has moved me into a good position now. And I think any external advice or anything on top of it
+ would have ruined the journey. It was such a beautiful journey when you had nothing in your life
+ to a point where you now have a good life. You are able to help out thousands of people.
+ I'm able to send my dad on a vacation on any country he puts out a finger on it. I recently sent
+ him to South Korea for just having a fun vacation. I think any external advice will ruin that whole
+ journey. I wouldn't do it any case. And I recommend to everyone as well. Hard times, the beauty about
+ the time is it will pass. Whether it's a good time or bad time, it will pass. So don't focus too much
+ on, hey, it's a bad time for me or it's not working. It will work out. Just put in the effort,
+ it requires probably for some people, it requires less effort. For me, it requires a crazy amount
+ of effort. Probably it requires more effort from your side. Probably 70 hours, probably 80 hours,
+ probably 100 hours. But with the hard work effort consistently, your time will come. Probably it will
+ take five years, 10 years. Some people have seen the success of their startup when they were 45
+ of age, probably 50 of age. So they were relentless in doing that hard work. A lot of my videos still
+ and in the early days, nobody noticed me. The hideous is a guy who posts YouTube videos. Nobody cared
+ about it, but it's been 13 years. I still have been constantly putting out effort. And even with
+ my new channel, I didn't expect it, people to show up this early, but they loved it, enjoyed it.
+ But probably I had more experience of delivering it. But I'm not here to go any time out. Even if
+ tomorrow's channel dies out or had whatever happens, I'll create another one. I'll start another one.
+ I'll still post videos. So don't worry too much about advices and all that. Just move on. It will
+ work with the book, Wendy. Awesome. Well, that's great advice to add on just like the kind of faith
+ that that things will work out. And that you can't really send anything back that won't maybe
+ potentially alter in a negative way how you got here, right? What if you accidentally sent something
+ back in it? There's like this butterfly effect. And oh, no, no, I'm like working as a janitor instead
+ of working as a teacher to all these people or something like that, right? Because you get me bad
+ advice or you get it. It's not the, yeah. So I definitely can understand where you're coming from.
+ And I just want to thank you for being such a positive influence on so many people and being out
+ there, putting yourself out there. I know not every single video blows up. You've got videos that
+ have millions of views. You've got videos that have a few thousand views. But you're putting your heart
+ into every single one of them. And I've really enjoyed learning from you over the years, learning.
+ And again, I encourage everybody watching this to watch your time management TED Talk. But also to
+ check out like your gate course, your TypeScript course, check out all the many courses you're creating
+ on your channel. And just to continue learning from you because you're a great resource for the
+ community. Thank you so much. You have been very kind in the words. Yeah. Well, everybody,
+ until next week, happy coding. Happy coding.
