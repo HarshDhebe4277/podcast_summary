@@ -1,14 +1,17 @@
-import sounddevice as sd
-import numpy as np
+import os
+import sys
+import time
 import queue
 import threading
-import os
+import numpy as np
+import sounddevice as sd
+import soundfile as sf
 from datetime import datetime
 from dotenv import load_dotenv
 import google.generativeai as genai
 from faster_whisper import WhisperModel
-# Replace the existing moviepy import block with this
-import sys
+
+# === Load MoviePy (Video support) ===
 try:
     import moviepy
     from moviepy import VideoFileClip
@@ -18,66 +21,78 @@ except ImportError as e:
     print(f"⚠️ Failed to import moviepy: {e}")
     print(f"Python executable: {sys.executable}")
     print(f"Python version: {sys.version}")
-    print("Please ensure moviepy is installed correctly using 'pip install moviepy'")
-    print("Run 'pip show moviepy' to verify installation details")
-    print("Check the moviepy installation directory: C:\\Users\\harsh\\OneDrive\\Desktop\\Summer Internship - Sujata Mam\\venv\\lib\\site-packages\\moviepy")
-    exit(1)   
-# ==== CONFIGURATION ====
+    print("Please install moviepy using 'pip install moviepy'")
+    exit(1)
+
+# === CONFIGURATION ===
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-# Load Whisper model for audio transcription
+# === WHISPER MODEL ===
 print("🔁 Loading Whisper model...")
 whisper_model = WhisperModel("base", compute_type="int8")
 print("✅ Whisper model loaded!")
 
-# Load Gemini model for Q&A generation
+# === GEMINI MODEL ===
 gemini_model = genai.GenerativeModel("models/gemini-1.5-flash")
 
-# Generate timestamp-based filenames
+# === TIMESTAMPS & PATHS ===
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-transcript_file = f"transcripts/transcript_{timestamp}.txt"
-summary_file = f"transcripts/qa_summary_{timestamp}.txt"
+TRANSCRIPT_DIR = "transcripts"
+AUDIO_DIR = "audio"
+os.makedirs(TRANSCRIPT_DIR, exist_ok=True)
+os.makedirs(AUDIO_DIR, exist_ok=True)
 
-# ==== AUDIO SETTINGS ====
-SAMPLING_RATE = 16000
-CHUNK_DURATION = 3
-CHUNK_SIZE = int(SAMPLING_RATE * CHUNK_DURATION)
-MERGE_SECONDS = 9
+transcript_file = os.path.join(TRANSCRIPT_DIR, f"transcript_{timestamp}.txt")
+summary_file = os.path.join(TRANSCRIPT_DIR, f"qa_summary_{timestamp}.txt")
+audio_file = os.path.join(AUDIO_DIR, f"audio_{timestamp}.wav")
 
-# ==== INIT ====
+# === AUDIO SETTINGS ===
+SAMPLE_RATE = 16000
+BLOCK_DURATION = 5  # seconds
+BLOCK_SIZE = int(SAMPLE_RATE * BLOCK_DURATION)
+
+# === INIT QUEUES ===
 audio_queue = queue.Queue()
-audio_buffer = []
+audio_frames = []
 
-if not os.path.exists("transcripts"):
-    os.makedirs("transcripts")
+# === SAVE CAPTION TO FILE ===
+def save_caption(text):
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    line = f"[{timestamp}] {text}"
+    print(f"\r📝 {line}", flush=True)
+    with open(transcript_file, "a", encoding="utf-8") as f:
+        f.write(line + "\n")
 
-# ==== AUDIO CALLBACK ====
-def audio_callback(indata, frames, time, status):
+# === AUDIO CALLBACK ===
+def audio_callback(indata, frames, time_info, status):
     if status:
         print("⚠️ Mic Error:", status)
     audio_queue.put(indata.copy())
+    audio_frames.append(indata.copy())
 
-# ==== SAVE TRANSCRIPT ====
-def save_segment_to_file(text):
-    with open(transcript_file, "a", encoding="utf-8") as f:
-        f.write(text + "\n")
+# === TRANSCRIPTION THREAD ===
+def transcribe_worker():
+    while True:
+        block = audio_queue.get()
+        if block is None:
+            break
+        block = block.flatten()
+        segments, _ = whisper_model.transcribe(block, language="en", beam_size=1, vad_filter=True)
+        for segment in segments:
+            save_caption(segment.text.strip())
 
-# ==== GEMINI Q&A ====
-# Update the generate_qa_summary function
+# === GEMINI Q&A ===
 def generate_qa_summary(transcript_path):
     with open(transcript_path, "r", encoding="utf-8") as f:
         transcript = f.read()
 
-    # Split transcript into chunks (approx 10,000 characters per chunk)
     max_chunk_size = 10000
-    transcript_lines = transcript.splitlines()
-    chunks = []
-    current_chunk = []
-    current_length = 0
+    lines = transcript.splitlines()
+    chunks, current_chunk, current_length = [], [], 0
 
-    for line in transcript_lines:
-        line_length = len(line) + 1  # +1 for newline
+    for line in lines:
+        line_length = len(line) + 1
         if current_length + line_length > max_chunk_size and current_chunk:
             chunks.append("\n".join(current_chunk))
             current_chunk = [line]
@@ -90,11 +105,11 @@ def generate_qa_summary(transcript_path):
 
     print(f"🧠 Generating Q&A summary with Gemini Flash ({len(chunks)} chunks)...")
     all_summaries = []
-    
+
     for i, chunk in enumerate(chunks, 1):
-        print(f"Processing chunk {i}/{len(chunks)}...")
+        print(f"📄 Processing chunk {i}/{len(chunks)}...")
         prompt = f"""
-        You are a helpful assistant. You are given a transcript chunk from a meeting or podcast.
+         You are a helpful assistant. You are given a transcript chunk from a meeting or podcast.
 
         Your job is to extract meaningful and natural **Question & Answer pairs**.
 
@@ -116,88 +131,59 @@ def generate_qa_summary(transcript_path):
         Here is the transcript chunk:
         {chunk}
         """
-
         try:
             response = gemini_model.generate_content(prompt)
-            summary = response.text
+            summary = response.text if hasattr(response, "text") else "[Empty response]"
             all_summaries.append(f"--- Chunk {i} ---\n{summary}")
         except Exception as e:
-            print(f"⚠️ Error processing chunk {i}: {e}")
-            all_summaries.append(f"--- Chunk {i} ---\nError: Could not generate Q&A for this chunk")
+            print(f"❌ Error with chunk {i}: {e}")
+            all_summaries.append(f"--- Chunk {i} ---\nError: Failed to generate summary")
 
-    # Combine all summaries
-    combined_summary = "\n\n".join(all_summaries)
-
-    # Save to file
+    final_output = "\n\n".join(all_summaries)
     with open(summary_file, "w", encoding="utf-8") as f:
-        f.write(combined_summary)
+        f.write(final_output)
 
-    print("\n📄 Q&A Summary:\n")
-    print(combined_summary)
-    
-# ==== TRANSCRIBE THREAD ====
-def transcribe_audio():
-    while True:
-        audio_chunk = audio_queue.get()
-        audio_buffer.append(audio_chunk)
+    print(f"\n✅ Q&A Summary saved to {summary_file}")
+    print(final_output)
 
-        max_chunks = MERGE_SECONDS // CHUNK_DURATION
-        if len(audio_buffer) > max_chunks:
-            audio_buffer.pop(0)
-
-        combined_audio = np.concatenate(audio_buffer, axis=0).flatten()
-
-        print("🧠 Transcribing merged audio...")
-        segments, _ = whisper_model.transcribe(combined_audio, language="en")
-
-        print("\n🎯 --- Captions ---")
-        for segment in segments:
-            print(f"[{segment.start:.1f}s - {segment.end:.1f}s]: {segment.text}")
-            save_segment_to_file(segment.text)
-        print("-------------------\n")
-
-
-# Update the process_video function
+# === VIDEO TRANSCRIPTION ===
 def process_video(video_path):
     print(f"🔄 Processing video: {video_path}")
     try:
         video = VideoFileClip(video_path)
         audio = video.audio
         audio_path = f"temp_audio_{timestamp}.wav"
-        audio.write_audiofile(audio_path)  # Changed from write_wav to write_audiofile
+        audio.write_audiofile(audio_path)
         audio.close()
         video.close()
-        
-        # Transcribe the extracted audio
+
         print("🧠 Transcribing video audio...")
         segments, _ = whisper_model.transcribe(audio_path, language="en")
-        
-        print("\n🎯 --- Video Captions ---")
+
         for segment in segments:
             print(f"[{segment.start:.1f}s - {segment.end:.1f}s]: {segment.text}")
-            save_segment_to_file(segment.text)
-        print("-------------------\n")
-        
-        # Clean up temporary audio file
+            save_caption(segment.text)
+
         if os.path.exists(audio_path):
             os.remove(audio_path)
-        
+
         return transcript_file
     except Exception as e:
         print(f"⚠️ Error processing video: {e}")
         return None
 
-# ==== MAIN ====
+# === MAIN ===
 if __name__ == "__main__":
     try:
         input_type = input("🎙️ Enter 'live' for microphone or 'video' for video file: ").strip().lower()
-        
+
         if input_type == "live":
-            print("🎙️ Speak into your mic... (Press Ctrl+C to stop)\n")
-            threading.Thread(target=transcribe_audio, daemon=True).start()
-            with sd.InputStream(samplerate=SAMPLING_RATE, channels=1, callback=audio_callback, blocksize=CHUNK_SIZE):
+            print("🎙️ Listening... (Press Ctrl+C to stop)\n")
+            threading.Thread(target=transcribe_worker, daemon=True).start()
+            with sd.InputStream(samplerate=SAMPLE_RATE, channels=1, callback=audio_callback, blocksize=BLOCK_SIZE):
                 while True:
-                    pass
+                    time.sleep(0.1)
+
         elif input_type == "video":
             video_path = input("📹 Enter video file path: ").strip()
             if not os.path.exists(video_path):
@@ -205,13 +191,20 @@ if __name__ == "__main__":
             else:
                 transcript_path = process_video(video_path)
                 if transcript_path:
-                    print(f"\n🛑 Video processing complete. Transcript saved to {transcript_file}")
-                    generate_qa_summary(transcript_file)
-                    print(f"\n✅ Q&A Summary saved to {summary_file}")
+                    print(f"\n🛑 Video processing complete. Transcript saved to {transcript_path}")
+                    generate_qa_summary(transcript_path)
+
         else:
             print("⚠️ Invalid input! Use 'live' or 'video'.")
+
     except KeyboardInterrupt:
         if input_type == "live":
-            print(f"\n🛑 Live captioning stopped. Transcript saved to {transcript_file}")
+            print(f"\n🛑 Stopping live transcription...")
+            audio_queue.put(None)
+
+            audio_np = np.concatenate(audio_frames, axis=0)
+            sf.write(audio_file, audio_np, SAMPLE_RATE)
+            print(f"💾 Audio saved to {audio_file}")
+            print(f"📝 Transcript saved to {transcript_file}")
+
             generate_qa_summary(transcript_file)
-            print(f"\n✅ Q&A Summary saved to {summary_file}")
